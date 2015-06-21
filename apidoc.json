@@ -1,0 +1,7 @@
+{
+  "name": "Kyros API REST",
+  "version": "0.1.0",
+  "description": "Kyros api for SUMO proyect",
+  "title": "Kyros api for SUMO proyect",
+  "url" : "http://sumo.kyroslbs.com:3000/kyrosapi"
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/dropdowns-enhancement.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/dropdowns-enhancement.min.css">
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/bower_components/bootstrap/dist/js/dropdowns-enhancement.js"></script>
+
+</head>
+<body>
+	 <nav class="navbar navbar-default" role="navigation">
+		  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <div class="navbar-brand navbar-brand-centered">Kyros API REST</div>
+		    </div>
+
+ 			<div class="bs-example">
+          <ul class="nav nav-pills">
+            <li class="dropdown"><a href="#"></a></li>
+
+						<li class="dropdown"> <a href="#" data-toggle="dropdown">Tracking <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+								<li><a href="/webkyrosapi/trackings1" tabindex="-1">Show all tracking_1</a></li>
+								<li><a href="/webkyrosapi/trackings5" tabindex="-1">Show all tracking_5</a></li>
+								<li class="divider"></li>
+								<li><a href="/webkyrosapi/trackings" tabindex="-1">Show all tracking</a></li>
+								<li><a href="/webkyrosapi/trackings/by_vehicleLicense/xxx" tabindex="-1">Show all tracking by vehicle license xxx</a></li>
+								<li><a href="/webkyrosapi/trackings/by_deviceId/xxx" tabindex="-1">Show all tracking by device id xxx</a></li>
+                <li class="divider"></li>
+                <li><a href="/webkyrosapi/newTracking" tabindex="-1">New tracking</a></li>
+              </ul>
+            </li>
+
+						<li class="dropdown"> <a href="#" data-toggle="dropdown">Area <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/webkyrosapi/areas" tabindex="-1">Show all areas</a></li>
+                <li class="divider"></li>
+                <li><a href="/webkyrosapi/newArea" tabindex="-1">New area</a></li>
+              </ul>
+            </li>
+
+           <li class="dropdown"> <a href="#" data-toggle="dropdown">Vertex <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/webkyrosapi/vertexes" tabindex="-1">Show all vertex</a></li>
+                <li class="divider"></li>
+                <li><a href="/webkyrosapi/newVertex" tabindex="-1">New vertex</a></li>
+              </ul>
+            </li>
+
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+						<li> <a href="/logout" tabindex="-1" >Login</b></a></li>
+						<li> <a href="/logout" tabindex="-1" >Logout</b></a></li>
+
+
+          </ul>
+          <!-- /pills -->
+        </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <!--div class="collapse navbar-collapse" id="navbar-brand-centered">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/">Crear un nuevo usuario</a></li>
+		        <li><a href="/users/">Ver todos los usuarios</a></li>
+		      </ul>
+		    </div--!><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	<div class="container">
+		<div class="row">

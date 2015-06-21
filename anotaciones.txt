@@ -1,0 +1,18 @@
+basado en:
+http://uno-de-piera.com/servicio-rest-con-nodejs-express-4-y-mysql/
+
+API DOC
+-------
+apidoc -i routes/ -o /Applications/MAMP/htdocs/dockyrosapi/
+
+
+apidoc -i routes/ -o /Users/Carlos/Workspace/SUMO/API_REST_nodejs/apidoc
+apidoc -i routes/ -o /Applications/MAMP/htdocs/dockyrosapi/
+apidoc -i routes/ -o apidoc/
+apidoc -i routes/ -o apidoc/ -t mytemplate/
+
+
+--
+Cabeceras autenticacion
+x-access-token
+x-key
