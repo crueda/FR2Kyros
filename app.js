@@ -7,15 +7,8 @@ var bodyParser = require('body-parser');
 var session		=	require('express-session');
 
 //var tracking = require('./routes/tracking');
-var trackingWeb = require('./routes/trackingWeb');
-var areaWeb = require('./routes/areaWeb');
-var vertexWeb = require('./routes/vertexWeb');
-var login = require('./routes/login');
-var area = require('./routes/areas');
-var vertex = require('./routes/vertex');
+var trackingWeb = require('./routes/status');
 var tracking = require('./routes/tracking');
-
-
 
 var app = express();
 
@@ -55,95 +48,13 @@ app.all('/*', function(req, res, next) {
 });
 
 
-
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'apidoc')));
 
 
-/*
-var sess;
-
-app.get('/',function(req,res){
-	sess=req.session;
-	if(sess.username)
-	{
-		res.redirect('/admin');
-	}
-	else{
-	  res.render('indexLogin.html');
-	}
-});
-
-app.post('/login',function(req,res){
-	sess=req.session;
-	sess.username=req.body.username;
-	sess.password=req.body.password;
-	//res.end('done');
-	if (sess.password == "dat1234")
-	{
-		res.redirect('/');
-	}
-	else {
-		req.session.destroy(function(err){});
-
-		res.render("errorAPI",{
-				title : "Kyros API REST",
-				message : "Login error"
-		});
-	}
-});
-
-app.get('/admin',function(req,res){
-	sess=req.session;
-	if(sess.username)
-	{
-		//res.write('<h1>Hello '+sess.email+'</h1><br>');
-		//res.end('<a href='+'/logout'+'>Logout</a>');
-		res.redirect('/webkyrosapi');
-	}
-	else
-	{
-		res.write('<h1>Please login first.</h1>');
-		res.end('<a href='+'/'+'>Login</a>');
-	}
-
-});
-
-app.get('/logout',function(req,res){
-
-	req.session.destroy(function(err){
-		if(err){
-			console.log(err);
-		}
-		else
-		{
-			res.redirect('/');
-		}
-	});
-
-});
-*/
-
-
-// Zona desmilitarizada
-app.use('/kyrosapi', login);
-
-app.use('/webkyrosapi', trackingWeb);
-app.use('/webkyrosapi', areaWeb);
-app.use('/webkyrosapi', vertexWeb);
-
-
-// AUTENTICACION TOKEN
-//app.all('/*', [require('./middlewares/validateRequest')]);
-
-// Zona protegida
-app.use('/kyrosapi', area);
-app.use('/kyrosapi', vertex);
+app.use('/kyrosapi', status);
 app.use('/kyrosapi', tracking);
-
-
-
 
 
 
